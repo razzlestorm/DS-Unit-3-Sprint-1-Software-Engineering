@@ -4,7 +4,7 @@ from acme import Product
 from acme_report import generate_products, ADJECTIVES, NOUNS
 
 
-class AcmeProductTests(unittest.TestCase):
+class AcmeProductAttrTests(unittest.TestCase):
     """Making sure Acme products are the tops!"""
     def test_default_product_price(self):
         """Test default product price being 10."""
@@ -21,15 +21,14 @@ class AcmeProductTests(unittest.TestCase):
         prod = Product('Test Product')
         self.assertEqual(prod.flammability, 0.5)
 
-# This test isn't working and I'm not sure why. It doesn't fail no matter what
     def test_name_is_str(self):
         """Test that product name is indeed a string."""
         prod = Product(1.0)
         self.assertTrue(isinstance(prod.name, str))
-        ## check unittest documentation
 
 
-class AcmeProductTests(unittest.TestCase):
+
+class AcmeProductFuncTests(unittest.TestCase):
     """Making sure Acme products are the tops!"""
     def test_default_num_products(self):
         """Test default product quantity being 30."""
