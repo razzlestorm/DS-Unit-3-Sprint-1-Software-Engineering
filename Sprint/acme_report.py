@@ -11,7 +11,11 @@ def generate_products(num_products=30):
     """generate a given number of products (default
       30), randomly, and return them as a list"""
     products = []
+    # For products in num_products, append a new Product.
     for ii in range(num_products):
+        # The following conforms with PEP8 line length requirements using f-strings.
+        # f-strings will concat themselves (even with line breaks) if they aren't
+        # separated by anything.
         prod_name = (
                     f'{ADJECTIVES[randint(0, len(ADJECTIVES)-1)]} '
                     f'{NOUNS[randint(0, len(NOUNS)-1)]}'
@@ -30,6 +34,7 @@ def inventory_report(products):
 
     - Number of unique product names in the product list
     - Average (mean) price, weight, and flammability of listed products'''
+    # Sets are used here to only get unique product keys
     nameset = set()
     total_price = 0
     total_weight = 0
