@@ -25,7 +25,7 @@ class AcmeProductTests(unittest.TestCase):
     def test_name_is_str(self):
         """Test that product name is indeed a string."""
         prod = Product(1.0)
-        self.assertTrue(isinstance(prod.name, float))
+        self.assertTrue(isinstance(prod.name, str))
         ## check unittest documentation
 
 
